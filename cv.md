@@ -22,3 +22,40 @@ I am a junior front-end web developer with background in data analytics, researc
 - SQL for Data Science [(Coursera, U of California, Davis)](http://bit.ly/2LWFSRg)
 - Intro to CS and Programming Using Python [(EdX, MIT)](http://bit.ly/3qGgkXA)
 - Visualizing Data with Python [(Coursera, U of Michigan)](http://bit.ly/3sGG3kx)
+### Code example
+**Snail sort algorithm**
+```javascript
+snail = function(array) {
+    let newArr = [];
+
+    while (array.length > 0) {
+      try {
+        // copy array's upper row to newArr
+        newArr = newArr.concat(array[0]);
+        // delete this row from the original array
+        array = array.slice(1);
+        // move the last items for each of the subarrays from array to newArr
+        array.forEach(i => newArr = newArr.concat(i.pop()));
+        // reverse the array's bottom row, cut it out and add to newArr 
+        newArr = newArr.concat(array.pop().reverse());
+        // move the first items for each of the subarrays from array to newArr in a reverse order
+        newArr = newArr.concat(array.map(item => item.shift()).reverse());
+      }
+      // break when array is empty the above methods return an error
+      catch(err) { 
+          break
+      }
+    }
+    
+    return newArr;
+}
+```
+
+## Education
+- PhD in Media and Communications, University of Tampere, Finland
+- MA in Journalism (media management), St. Petersburg State University, Russia
+
+## Language skills
+- English (C1): professional academic work, including scientific writing, university teaching, conference presentations
+- Finnish (B2): fluent, 
+- Russian (C2): native
