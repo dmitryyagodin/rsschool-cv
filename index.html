@@ -12,12 +12,12 @@
   <div class="flex-container">
     <h1>Dmitry Yagodin</h1>
   <img src="./photo.png" alt="Yagodin photo">
-  <adress>
+  <div>
     <a href="mailto:dmitry.yagodin@gmail.com"><i class="fas fa-envelope-square"></i></a>
     <a href="https://www.linkedin.com/in/dmitry-yagodin/"><i class="fab fa-linkedin"></i></a>
     <a href="https://twitter.com/yagodim"><i class="fab fa-twitter-square"></i></a>
     <a href="https://github.com/dmitryyagodin"><i class="fab fa-github-square"></i></a>
-  </adress>
+  </div>
   <h2>About</h2>
   <p>I am a front-end web developer from Tampere, Finland. My background is in data analytics, media research, and journalism. In previous roles I had been using programming for data wrangling, web scraping and data visualizations. I have solid coding experience in Python and JavaScript and look forward to constantly improve my skills in modern full-stack web development with React, Node.js, Express.js, MongoDB (<em>MERN stack</em>).</p>
   <h2>Hard skills</h2>
@@ -71,13 +71,16 @@
           // delete this row from the original array
           array = array.slice(1);
 
-          // move the last items for each of the subarrays from array to newArr
+          // move the last items for each of the subarrays
+          // from array to newArr
           array.forEach(i => newArr = newArr.concat(i.pop()));
 
-          // reverse the array's bottom row, cut it out and add to newArr 
+          // reverse the array's bottom row, cut it out 
+          // and add to newArr 
           newArr = newArr.concat(array.pop().reverse());
 
-          // move the first items for each of the subarrays from array to newArr in a reverse order
+          // move the first items for each of the subarrays
+          // from array to newArr in a reverse order
           newArr = newArr.concat(array.map(item => item.shift()).reverse());
         }
 
