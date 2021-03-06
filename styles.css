@@ -13,14 +13,25 @@ main {
   max-width: 800px;
   margin: 90px auto 10px auto;
   text-align: center;
+  font-size: 1.5em;
 }
 
+@media (max-width: 650px) {
+  main {
+    font-size: 1.25em;
+  }
+}
+
+@media (max-width: 500px) {
+  main {
+    font-size: 1em;
+  }
+}
 
 pre {
   margin: 0;
-  
   width: 90%;
-  max-width: 450px;
+  max-width: 720px;
 }
 
 pre code {
@@ -39,27 +50,30 @@ a {
   text-decoration: none;
 }
 
-img {
+main img {
   max-width: 200px;
   max-height: 200px;
+  border-radius: 50%;
+  box-shadow: 10px 8px 15px grey;
 }
 
 ul {
   text-align: start;
-  width: 80%;
-  max-width: 450px;
+  width: 90%;
+  max-width: 720px;
 }
 
 p {
   margin: 0;
   width: 90%;
-  max-width: 450px;
+  max-width: 720px;
   text-align: justify;
 }
 
 h1 {
   line-height: 80px;
   margin: 0;
+  font-size: 2em;
 }
 
 h2, h3, h4 {
