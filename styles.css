@@ -24,7 +24,7 @@ main {
 
 @media (max-width: 500px) {
   main {
-    font-size: 1em;
+    font-size: 1.1em;
   }
 }
 
@@ -59,13 +59,13 @@ main img {
 
 ul {
   text-align: start;
-  width: 100%;
+  width: 96%;
   max-width: 720px;
 }
 
 p {
   margin: 0;
-  width: 100%;
+  width: 96%;
   max-width: 720px;
   text-align: justify;
 }
