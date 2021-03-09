@@ -113,3 +113,22 @@ footer .fab {
   color: whitesmoke;
   margin: 0;
 }
+
+.contacts {
+  width: 100%;
+  text-align: center;
+}
+
+.contacts-list {
+  display: flex;
+  justify-content: center;
+  list-style-type: none;
+  margin: 0 auto;
+  padding: 0;
+  overflow: hidden;
+}
+
+.contacts-list li {
+  float: left;
+  display: inline;
+}
