@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png">
+  <link rel="manifest" href="./manifest.json">
+  <link rel="stylesheet" href="./styles.css">
+  <script src="https://kit.fontawesome.com/ce90d4d22c.js" crossorigin="anonymous"></script>
+  <title>Dmitry Yagodin CV</title>
+</head>
+<body>
+  <header>
+    <h1>Dmitry Yagodin</h1>
+  </header>
+  <main class="flex-container">
+    <img src="./photo.png" alt="Yagodin photo">
+  <div class="contacts">
+    <ul class="contacts-list">
+      <li><a href="mailto:dmitry.yagodin@gmail.com"><i class="fas fa-envelope-square"></i></a></li>
+      <li><a href="https://www.linkedin.com/in/dmitry-yagodin/"><i class="fab fa-linkedin"></i></a></li>
+      <li><a href="https://twitter.com/yagodim"><i class="fab fa-twitter-square"></i></a></li>
+      <li><a href="https://github.com/dmitryyagodin"><i class="fab fa-github-square"></i></a></li>
+    </ul>    
+  </div>
+  
+  <article>
+    <h2>About</h2>
+    <p>I am a <strong>front-end web developer</strong> from Tampere, Finland. My background is in data analytics, media research, and journalism. In previous roles I had been using programming for data wrangling, web scraping and data visualizations. I have solid coding experience in Python and JavaScript and look forward to constantly improve my skills in modern full-stack web development with React, Node.js, Express.js, MongoDB (<em>MERN stack</em>).
+    </p>
+  </article>
+  <h2>Hard skills</h2>
+  <ul>
+    <li>HMTL5</li>
+    <li>CSS3, SASS, Bootsrapt</li>
+    <li>Javascript (ES6), React</li>
+    <li>SQL (PostgreSQL, Sqlite)</li>
+    <li>Python (numpy, pandas)</li>
+    <li>Git</li>
+  </ul>
+  <h2>Experience</h2>
+  <h3>Projects</h3>
+  <ul>
+    <li>WordGame app in plain JavaScript. See it on <a href="https://dmitryyagodin.github.io/word-game">GitHub pages</a></li>
+    <li>Random Quote Machine. Try it on <a href="https://tweet-a-quote.herokuapp.com/">Heroku</a></li>
+    <li>8 Puzzle game using React. See it on <a href="https://dmitryyagodin.github.io/react-game/">GitHub pages</a></li>
+  </ul>
+  <h3>Courses and Certifications</h3>
+  <ul>
+    <li>JavaScript Algorithms and Data Structures (<a href="https://bit.ly/362GSdt">FreeCodeCamp.org</a>)</li>
+    <li>Foundations for Big Data Analysis with SQL (<a href="http://bit.ly/3ixJWTY">Coursera, Cloudera</a>)</li>
+    <li>Web application technologies and Django (<a href="http://bit.ly/2KFcNcG">Coursera, U of Michigan</a>)</li>
+    <li>Python for Everybody (<a href="http://bit.ly/361pFBs">Coursera, U of Michigan</a>)</li>
+    <li>SQL for Data Science (<a href="http://bit.ly/2LWFSRg">Coursera, U of California, Davis</a>)</li>
+    <li>Intro to CS and Programming Using Python (<a href="http://bit.ly/3qGgkXA">EdX, MIT</a>)</li>
+    <li>Visualizing Data with Python (<a href="http://bit.ly/3sGG3kx">Coursera, U of Michigan</a>)</li>
+  </ul>
+  <section>
+  <h3>Code example</h3>
+  <h4>Snail sort algorithm. See it on <a href="https://www.codewars.com/kata/521c2db8ddc89b9b7a0000c1">Codewars</a>.</h4>
+  <p><em>Problem</em>: Given an n x n array, return the array elements arranged from outermost elements to the middle element, traveling clockwise.</p>
+  <pre>
+    <code>
+array = [[1,2,3],
+        [4,5,6],
+        [7,8,9]]
+snail(array) #=> [1,2,3,6,9,8,7,4,5]
+    </code>
+  </pre>
+  <p><em>Solution</em>:</p>
+  <pre>
+    <code>
+snail = function(array) {
+  let newArr = [];
+
+  while (array.length > 0) {
+    try {
+      // copy array's upper row to newArr
+      newArr = newArr.concat(array[0]);
+
+      // delete this row from the original array
+      array = array.slice(1);
+
+      // move the last items for each of the subarrays
+      // from array to newArr
+      array.forEach(i => newArr = newArr.concat(i.pop()));
+
+      // reverse the array's bottom row, cut it out 
+      // and add to newArr 
+      newArr = newArr.concat(array.pop().reverse());
+
+      // move the first items for each of the subarrays
+      // from array to newArr in a reverse order
+      newArr = newArr.concat(array.map(item => item.shift()).reverse());
+    }
+
+    // break when array is empty the above methods return an error
+    catch(err) { 
+        break
+    }
+  } 
+  return newArr;
+}
+    </code>
+  </pre>
+</section>
+  <h2>Education</h2>
+  <ul>
+    <li>PhD in Media and Communications, University of Tampere, Finland</li>
+    <li>MA in Journalism (media management), St. Petersburg State University, Russia</li>
+  </ul>
+  <h2>Language skills</h2>
+  <ul>
+    <li>English (C1): professional academic work, including scientific writing, university teaching, conference presentations</li>
+    <li>Finnish (B2): fluent</li>
+    <li>Russian: native</li>
+  </ul>
+  </main>
+  <footer>
+    <div>
+      <a href="https://rs.school/js/">
+        <img src="rs_school_js.svg" alt="RS School logo">
+      </a>
+    </div>
+    <div>
+      Dmitry Yagodin (2021)
+    </div>
+    <div>
+      <a href="https://github.com/dmitryyagodin">
+        <i class="fab fa-github"></i>
+      </a>
+    </div>  
+  </footer>  
+</body>
+</html>
